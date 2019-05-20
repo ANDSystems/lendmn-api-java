@@ -46,26 +46,27 @@ public class AccessToken {
 
 	@Override
 	public boolean equals(Object obj) {
-        if (this == obj) {
-        	
-            return true;
-        } else if (obj == null) {
-        	
-            return false;
-        } else if (obj instanceof AccessToken) {
-        	AccessToken token = (AccessToken) obj;
+		if (this == obj) {
 
-            if ((token.getToken() == null && this.token == null) || (token.getToken().equals(this.token) && 
-        		((token.getExpiresIn() == null && this.expiresIn == null) || token.getExpiresIn().equals(this.expiresIn)) && 
-        		((token.scope == null && this.scope == null) || token.scope.equals(this.scope)))) {
+			return true;
+		} else if (obj == null) {
 
-                return true;
+			return false;
+		} else if (obj instanceof AccessToken) {
+			AccessToken token = (AccessToken) obj;
 
-            }
+			if ((token.getToken() == null && this.token == null) || (token.getToken().equals(this.token)
+					&& ((token.getExpiresIn() == null && this.expiresIn == null)
+							|| token.getExpiresIn().equals(this.expiresIn))
+					&& ((token.scope == null && this.scope == null) || token.scope.equals(this.scope)))) {
 
-        }
+				return true;
 
-        return false;
+			}
+
+		}
+
+		return false;
 	}
 
 }

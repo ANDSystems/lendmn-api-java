@@ -16,6 +16,7 @@ import java.net.MalformedURLException;
 import lendmn.api.Client; 
 import lendmn.api.LendMNService;
 import lendmn.api.InvalidResponseException;
+import lendmn.api.ApiException;
 
 public class Sample {
   private static String host = "mgw.test.lending.mn";
